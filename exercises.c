@@ -48,7 +48,7 @@ List* crea_lista()
     {
       int *dato = (int*)malloc(sizeof(int));
       *dato = i;
-      push(L, dato);
+      pushfront(L, dato);
     }
   
   return L;
@@ -69,7 +69,6 @@ int sumaLista(List *L)
       valor += *dato;
       dato = (int*)next(L);
     }
-  
   return valor;
 }
 
@@ -82,7 +81,8 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
+void eliminaElementos(List*L, int elem)
+{
 
 }
 

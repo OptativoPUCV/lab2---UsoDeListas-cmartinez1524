@@ -20,3 +20,15 @@ Thu 21 Mar 2024 01:40:55 AM UTC:
  tests:  2|3
 total_score: 20/70
 d2bbaf9
+Thu 21 Mar 2024 01:43:58 AM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:51:7: error: implicit declaration of function ‘pushfront’; did you mean ‘pushFront’? [-Werror=implicit-function-declaration]
+   51 |       pushfront(L, dato);
+      |       ^~~~~~~~~
+      |       pushFront
+cc1: all warnings being treated as errors
+Compilation failed
+62dd76c
