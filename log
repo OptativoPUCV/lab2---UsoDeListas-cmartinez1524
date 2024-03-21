@@ -172,3 +172,17 @@ Thu 21 Mar 2024 02:10:31 AM UTC:
  tests:  5|1
 total_score: 50/70
 9c72519
+Thu 21 Mar 2024 02:11:57 AM UTC: 
+ exercises.c | 31 +------------------------------
+ 1 file changed, 1 insertion(+), 30 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:160:15: error: suggest explicit braces to avoid ambiguous ‘else’ [-Werror=dangling-else]
+  160 |             if(cadena[i] == '}')
+      |               ^
+exercises.c:169:1: error: control reaches end of non-void function [-Werror=return-type]
+  169 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7cf7ed0
