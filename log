@@ -95,3 +95,14 @@ Thu 21 Mar 2024 01:54:03 AM UTC:
  tests:  3|2
 total_score: 40/70
 6c90ff2
+Thu 21 Mar 2024 01:57:50 AM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:111:14: error: ‘dato’ is used uninitialized [-Werror=uninitialized]
+  111 |   while(dato != NULL)
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+6cdcda9
