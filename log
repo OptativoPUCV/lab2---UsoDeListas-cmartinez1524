@@ -197,3 +197,14 @@ exercises.c:170:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 a4e6285
+Thu 21 Mar 2024 02:13:58 AM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:171:1: error: control reaches end of non-void function [-Werror=return-type]
+  171 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b911169
