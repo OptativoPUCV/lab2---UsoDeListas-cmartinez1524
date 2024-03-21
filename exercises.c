@@ -138,10 +138,15 @@ int parentesisBalanceados(char *cadena)
 {
     Stack* P = create_stack();
     int i = 0;
+    char *dato;
+    dato = (char*)malloc(sizeof(char));
+    
     while(cadena[i] != '\0')
     {
+        dato = cadena[i];
         if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
-            push(P, (void *)cadena[i]);
+          push(P, dato);
+                
         else
         {
             if(cadena[i] == ')')

@@ -317,3 +317,14 @@ exercises.c:144:21: error: cast to pointer from integer of different size [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 1d63408
+Thu 21 Mar 2024 02:28:11 AM UTC: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:146:14: error: assignment to ‘char *’ from ‘char’ makes pointer from integer without a cast [-Werror=int-conversion]
+  146 |         dato = cadena[i];
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+35c4c1e
