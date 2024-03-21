@@ -362,3 +362,31 @@ exercises.c:164:27: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 1933517
+Thu 21 Mar 2024 02:33:03 AM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:145:27: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  145 |             push(P, cadena[i]);
+      |                     ~~~~~~^~~
+      |                           |
+      |                           char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:150:34: error: comparison between pointer and integer [-Werror]
+  150 |                 if((char*)top(P) != '(')
+      |                                  ^~
+exercises.c:157:34: error: comparison between pointer and integer [-Werror]
+  157 |                 if((char*)top(P) != '[')
+      |                                  ^~
+exercises.c:164:34: error: comparison between pointer and integer [-Werror]
+  164 |                 if((char*)top(P) != '{')
+      |                                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+8dd5c40
