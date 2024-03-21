@@ -306,3 +306,14 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
 cc1: all warnings being treated as errors
 Compilation failed
 0efbc03
+Thu 21 Mar 2024 02:24:30 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:144:21: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  144 |             push(P, (void *)cadena[i]);
+      |                     ^
+cc1: all warnings being treated as errors
+Compilation failed
+1d63408
