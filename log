@@ -67,3 +67,14 @@ exercises.c:87:14: error: ‘dato’ is used uninitialized [-Werror=uninitialize
 cc1: all warnings being treated as errors
 Compilation failed
 d25c034
+Thu 21 Mar 2024 01:47:40 AM UTC: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:93:11: error: dereferencing ‘void *’ pointer [-Werror]
+   93 |           *popCurrent(L);
+      |           ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6c09c58
