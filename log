@@ -142,3 +142,9 @@ exercises.c:128:14: error: ‘p2’ undeclared (first use in this function); did
 exercises.c:128:14: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 8e79943
+Thu 21 Mar 2024 02:01:46 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 40/70
+8ec3fa1
