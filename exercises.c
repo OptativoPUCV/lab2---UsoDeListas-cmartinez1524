@@ -138,49 +138,41 @@ int parentesisBalanceados(char *cadena)
 {
     Stack* P = create_stack();
     int i = 0;
-    char *dato;
-    dato = (char*)malloc(sizeof(char));
-    
+
     while(cadena[i] != '\0')
     {
-        *dato = cadena[i];
         if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
-          push(P, dato);
-                
+            push(P, cadena[i]);
         else
         {
             if(cadena[i] == ')')
             {
-                if(top(P) == NULL)
+                if(top(P) != '(')
                     return 0;
                 else
                     pop(P);
             }
-            else
+            else if(cadena[i] == ']')
             {
-                if(cadena[i] == ']')
-                {
-                    if(top(P) == NULL)
-                        return 0;
-                    else
-                        pop(P);
-                }
+                if(top(P) != '[')
+                    return 0;
                 else
-                {
-                    if(cadena[i] == '}')
-                    {
-                        if(top(P) == NULL)
-                            return 0;
-                        else
-                            pop(P);
-                    }
-                }
+                    pop(P);
+            }
+            else if(cadena[i] == '}')
+            {
+                if(top(P) != '{')
+                    return 0;
+                else
+                    pop(P);
             }
         }
         i++;
     }
+
     if (top(P) == NULL)
-      return 1;
+        return 1; // Paréntesis balanceados
     else 
-      return 0;
+        return 0; // Paréntesis no balanceados
 }
+
