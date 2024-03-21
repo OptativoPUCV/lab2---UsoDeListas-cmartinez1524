@@ -328,3 +328,9 @@ exercises.c:146:14: error: assignment to ‘char *’ from ‘char’ makes poin
 cc1: all warnings being treated as errors
 Compilation failed
 35c4c1e
+Thu 21 Mar 2024 02:28:23 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 60/70
+f4f5a59
