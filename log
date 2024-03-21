@@ -630,3 +630,17 @@ exercises.c:166:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 11d92ba
+Thu 21 Mar 2024 11:14:49 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:152:73: error: expected statement before ‘)’ token
+  152 |             if(cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}'))
+      |                                                                         ^
+exercises.c:167:1: error: control reaches end of non-void function [-Werror=return-type]
+  167 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e173907
