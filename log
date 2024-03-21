@@ -130,3 +130,15 @@ Thu 21 Mar 2024 02:01:17 AM UTC:
  tests:  3|2
 total_score: 40/70
 1670948
+Thu 21 Mar 2024 02:01:43 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:128:14: error: ‘p2’ undeclared (first use in this function); did you mean ‘P2’?
+  128 |   dato = top(p2);
+      |              ^~
+      |              P2
+exercises.c:128:14: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8e79943
