@@ -616,3 +616,17 @@ arraylist.c:37:6: error: ‘pushFront’ defined but not used [-Werror=unused-fu
 cc1: all warnings being treated as errors
 Compilation failed
 d9357a5
+Thu 21 Mar 2024 11:13:45 PM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:152:73: error: expected statement before ‘)’ token
+  152 |             if(cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}'))
+      |                                                                         ^
+exercises.c:166:1: error: control reaches end of non-void function [-Werror=return-type]
+  166 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+11d92ba
