@@ -166,8 +166,7 @@ int parentesisBalanceados(char *cadena)
                 pop(P);
             }
           }
+        }
       i++;
-      
     }
-}
 }
