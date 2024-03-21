@@ -53,3 +53,17 @@ arraylist.h:32:7: note: declared here
       |       ^~~~~~~~~~
 Compilation failed
 9f52d96
+Thu 21 Mar 2024 01:47:17 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:91:11: error: dereferencing ‘void *’ pointer [-Werror]
+   91 |           *popCurrent(L);
+      |           ^~~~~~~~~~~~~~
+exercises.c:87:14: error: ‘dato’ is used uninitialized [-Werror=uninitialized]
+   87 |   while(dato != NULL)
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+d25c034
