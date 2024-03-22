@@ -134,34 +134,30 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) 
-{
+int parentesisBalanceados(char* cadena) {
     Stack* P = create_stack();
     int i = 0;
-    char *dato;
-    dato = (char*)malloc(sizeof(char));
-    
-    while(cadena[i] != '\0')
-    {
-        *dato = cadena[i];
-        if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
-          push(P, dato);
-                
-        else
-        {
-            if(cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}'))
-            {
-                if(top(P) == NULL)
-                    return 0;
-                else
-                    pop(P);
+
+    while (cadena[i] != '\0') {
+        if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{') {
+            push(P, cadena[i]);
+        } else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') {
+            if (top(P) == NULL) {
+                return 0; // Hay un cierre sin un correspondiente apertura
+            }
+            char topChar = pop(P);
+            if ((cadena[i] == ')' && topChar != '(') ||
+                (cadena[i] == ']' && topChar != '[') ||
+                (cadena[i] == '}' && topChar != '{')) {
+                return 0; // El cierre no coincide con la apertura
             }
         }
         i++;
-      
-    if (top(P) == NULL)
-      return 1;
-    else 
-      return 0;
+    }
+
+    if (top(P) == NULL) {
+        return 1; // Paréntesis balanceados
+    } else {
+        return 0; // Hay aperturas sin cerrar
     }
 }

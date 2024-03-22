@@ -644,3 +644,25 @@ exercises.c:167:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 e173907
+Fri 22 Mar 2024 10:55:39 PM UTC: 
+ exercises.c | 40 ++++++++++++++++++----------------------
+ 1 file changed, 18 insertions(+), 22 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:143:27: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  143 |             push(P, cadena[i]);
+      |                     ~~~~~~^~~
+      |                           |
+      |                           char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:148:28: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  148 |             char topChar = pop(P);
+      |                            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+f9a6eca
