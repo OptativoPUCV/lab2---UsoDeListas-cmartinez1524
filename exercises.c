@@ -137,26 +137,22 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char* cadena) {
     Stack* P = create_stack();
     int i = 0;
-    char* dato;
 
     while (cadena[i] != '\0') {
-        dato = (char*)malloc(sizeof(char));
-        *dato = cadena[i];
-        if (*dato == '(' || *dato == '[' || *dato == '{') {
-            push(P, dato);
-        } else if (*dato == ')' || *dato == ']' || *dato == '}') {
+        if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{') {
+            push(P, cadena[i]);
+        } else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}') {
             if (top(P) == NULL) {
-                free(dato); // Liberar memoria asignada antes de salir
                 return 0; // Hay un cierre sin una correspondiente apertura
             }
-            char topChar = pop(P);
-            if ((*dato == ')' && topChar != '(') ||
-                (*dato == ']' && topChar != '[') ||
-                (*dato == '}' && topChar != '{')) {
-                free(dato); // Liberar memoria asignada antes de salir
+            char* topCharPtr = (char*)pop(P);
+            char topChar = *topCharPtr;
+            free(topCharPtr); // Liberar memoria asignada
+            if ((cadena[i] == ')' && topChar != '(') ||
+                (cadena[i] == ']' && topChar != '[') ||
+                (cadena[i] == '}' && topChar != '{')) {
                 return 0; // El cierre no coincide con la apertura
             }
-            free(dato); // Liberar memoria asignada
         }
         i++;
     }

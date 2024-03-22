@@ -677,3 +677,21 @@ exercises.c:152:28: error: initialization of ‘char’ from ‘void *’ makes 
 cc1: all warnings being treated as errors
 Compilation failed
 76079c7
+Fri 22 Mar 2024 10:59:32 PM UTC: 
+ exercises.c | 22 +++++++++-------------
+ 1 file changed, 9 insertions(+), 13 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:143:27: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  143 |             push(P, cadena[i]);
+      |                     ~~~~~~^~~
+      |                           |
+      |                           char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d355137
