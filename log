@@ -701,3 +701,14 @@ Fri 22 Mar 2024 11:00:29 PM UTC:
  tests:  9|0
 total_score: 70/70
 813f875
+Sat 23 Mar 2024 01:04:53 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:152:28: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  152 |             char topChar = top(P);
+      |                            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+cf964b3
