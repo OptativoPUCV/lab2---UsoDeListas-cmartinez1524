@@ -150,9 +150,9 @@ int parentesisBalanceados(char* cadena) {
                 return 0; // Hay un cierre sin una correspondiente apertura
             }
             char *topChar = top(P);
-            if ((*dato == ')' && topChar != '(') ||
-                (*dato == ']' && topChar != '[') ||
-                (*dato == '}' && topChar != '{')) {
+            if ((*dato == ')' && *topChar != '(') ||
+                (*dato == ']' && *topChar != '[') ||
+                (*dato == '}' && *topChar != '{')) {
                 free(dato); // Liberar memoria asignada antes de salir
                 return 0; // El cierre no coincide con la apertura
             }
