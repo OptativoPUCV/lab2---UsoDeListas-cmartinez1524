@@ -747,3 +747,16 @@ Sat 23 Mar 2024 01:07:36 AM UTC:
  tests:  9|0
 total_score: 70/70
 6b655d5
+Sat 23 Mar 2024 01:07:55 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:145:26: error: expected ‘;’ before ‘if’
+  145 |         *dato = cadena[i]
+      |                          ^
+      |                          ;
+  146 |         if (*dato == '(' || *dato == '[' || *dato == '{') {
+      |         ~~                
+Compilation failed
+be95da0
