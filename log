@@ -766,3 +766,20 @@ Sat 23 Mar 2024 01:08:39 AM UTC:
  tests:  9|0
 total_score: 70/70
 d3abdc4
+Sat 23 Mar 2024 01:10:15 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:154:42: error: comparison between pointer and integer [-Werror]
+  154 |             if ((*dato == ')' && topChar != '(') ||
+      |                                          ^~
+exercises.c:155:42: error: comparison between pointer and integer [-Werror]
+  155 |                 (*dato == ']' && topChar != '[') ||
+      |                                          ^~
+exercises.c:156:42: error: comparison between pointer and integer [-Werror]
+  156 |                 (*dato == '}' && topChar != '{')) {
+      |                                          ^~
+cc1: all warnings being treated as errors
+Compilation failed
+98abd5b
