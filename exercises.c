@@ -161,10 +161,9 @@ int parentesisBalanceados(char* cadena) {
         }
         i++;
     }
-
-    if (top(P) == NULL) {
+    if (top(P) == NULL) 
+    {
         return 1; // Paréntesis balanceados
-    } else {
+    } else 
         return 0; // Hay aperturas sin cerrar
-    }
 }
